@@ -1,0 +1,61 @@
+:root{
+  --bg:#020617;
+  --card:#020617;
+  --primary:#b91c1c;
+  --text:#e5e7eb;
+}
+
+body{
+  margin:0;
+  font-family:sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  padding-bottom:80px;
+}
+
+.header{
+  text-align:center;
+  padding:10px;
+  background:#0f172a;
+}
+
+.header img{
+  width:60px;
+  border-radius:50%;
+}
+
+.card{
+  background:#020617;
+  margin:15px;
+  padding:15px;
+  border-radius:12px;
+}
+
+input,button{
+  width:100%;
+  padding:12px;
+  margin-top:8px;
+  border-radius:8px;
+}
+
+button{
+  background:var(--primary);
+  color:white;
+  border:none;
+  font-weight:bold;
+}
+
+.nav-bar{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+  background:#0f172a;
+  padding:15px 0;
+}
+
+.nav-bar div{
+  font-weight:bold;
+  cursor:pointer;
+}

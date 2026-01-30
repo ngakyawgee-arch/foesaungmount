@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LFM Donation System</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#b91c1c">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+<!-- html2canvas -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div id="overlay">
+  <h3 id="formTitle">LFM LOGIN</h3>
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<header class="header">
+  <img src="assets/img/logo.png">
+  <h3>LFM - Monthly Donation</h3>
+</header>
+
+<main id="content"></main>
+
+<nav class="nav-bar">
+  <div onclick="showMonthly()">Monthly</div>
+  <div onclick="showSummary()">Summary</div>
+  <div onclick="logout()">Logout</div>
+</nav>
+
+<script src="assets/js/firebase.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/monthly.js"></script>
+<script src="assets/js/export.js"></script>
+<script src="assets/js/app.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
